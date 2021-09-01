@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="content">
+        <h1>Calculadora API</h1>
+
+        <div id="calculatorResult">
+          <form id="calculator">
+            <h2>Operações simples</h2>
+
+            <label for="operation" class="form-group">
+              Operação
+              <select name="operation" id="operation">
+                <option value="somar">Somar</option>
+                <option value="subtrair">Subtrair</option>
+                <option value="multiplicar">Multiplicar</option>
+                <option value="dividir">Dividir</option>
+                <option value="raiz">Raíz Quadrada</option>
+                <option value="potencia">Potência</option>
+              </select>
+            </label>
+
+            <div class="flex-item">
+              <label for="first_value" class="form-group">
+                Valor 1
+                <input type="number" id="first_value" name="first_value" />
+              </label>
+              <label for="second_value" class="form-group">
+                Valor 2
+                <input type="number" id="second_value" name="second_value" />
+              </label>
+            </div>
+            <button class="btn" type="submit" form="calculator">
+              Calcular
+            </button>
+          </form>
+        </div>
+
+        <div id="statisticResult">
+          <form id="statistic">
+            <h2>Operações estatísticas</h2>
+
+            <label for="type" class="form-group">
+              Operação
+              <select name="type" id="type">
+                <option value="media">Média Aritmética</option>
+                <option value="harmonica">Média Harmônica</option>
+                <option value="moda">Moda</option>
+              </select>
+            </label>
+
+            <label for="values" class="form-group">
+              Valores
+              <input
+                id="values"
+                name="values"
+                placeholder="Digite os valores separados por vírgula EX: 1,2,5,10"
+              />
+            </label>
+            <button class="btn" type="submit" form="statistic">Calcular</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
